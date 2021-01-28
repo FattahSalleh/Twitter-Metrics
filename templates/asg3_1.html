@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+
+  p{
+    text-align: left;
+  }
+
+</style>
+
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Assignment 3 - Social Network Analysis (SNA)</h1>
+  </div>
+
+  
+
+  <div class="grid-container-asg3">
+
+    <div class="grid-item-asg3-logo">
+      <img class='logo_img' src='/static/pic/watsons.png'>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 800px;">
+      <h2>Community</h2>
+      <img class='asg3_img_graph' src='/static/graphs watsons/new communities.jpg' style="height: 550px; width: auto;">
+      <h3>Modularity Score: 0.70901</h3>
+      <p>Modularity measures the strength of division of a network into modules.</p>
+      <p>Networks with high modularity have dense connections between the nodes within modules, but sparse connections between nodes in different modules.</p>
+      <p>We can say that each class in the community have high interclass correlation and low intraclass correlation.</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 450px;">
+      <h2>The Most Central Nodes of each Community based on Eigenvector</h2>
+      <img class='asg3_img' src='/static/graphs watsons/10 top 10 central nodes of each comm by eigenvector.png'>
+      <p>Eigenvector Centrality is a measure of a node's influence in a network.</p>
+      <p>A high eigenvector score means a node is connected to many nodes that have high scores themselves.</p>    </div>
+
+
+    <div class="grid-item-asg3" style="height: 450px;">
+      <h2>The Most Central Nodes of each Community based on Betweeness</h2>
+      <img class='asg3_img' src='/static/graphs watsons/11 top 10 central nodes of each comm by betweeness.png'>
+      <p>Betweeness Centrality tests how relevant a node is for the shortest network paths.</p>
+      <p>It is a measure of how important the node is for information flow over a network.</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 500px;">
+      <h2>Community 0</h2>
+      <img class='asg3_img' src='/static/graphs watsons/0.png' style="height: 300px; width: auto;">
+      <p>Most Central Nodes: watsonsmy & AshaLiyana21</p>
+      <p>AshaLiyana21 is one of the competitors in Watsons Malaysia's Top Influencer 2018.</p>
+      <p>People who follow Watsons are likely to follow her to be kept updated about the competition.</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 500px;">
+      <h2>Community 1</h2>
+      <img class='asg3_img' src='/static/graphs watsons/1.png' style="height: 300px; width: auto;">
+      <p>Most Central Nodes: ohmostwanted & benefitbeauty</p>
+      <p>Ohmostwanted is a local make-up brand. Benefitbeauty is an international make-up brand that has stores in Malaysia.</p>
+      <p>The users in this community has an interest in make-up.</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 500px;">
+      <h2>Community 5</h2>
+      <img class='asg3_img' src='/static/graphs watsons/5.png' style="height: 300px; width: auto;">
+      <p>Most Central Node: Renner4Real</p>
+      <p>Renner4Real or his real name - Jeremy Renner - is a well-known actor especially for his character, Hawkeye, in the Marvel Cinematic Universe films.</p>
+      <p>The nodes in this community are a fan of Marvel movies.</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 500px;">
+      <h2>Community 9</h2>
+      <img class='asg3_img' src='/static/graphs watsons/9.png' style="height: 300px; width: auto;">
+      <p>Most Central Node: brandonleong_ & emmawatsons</p>
+      <p>Emma Watsons is a famous Hollywood actor while Brandon Leong is just a normal Twitter user.</p>
+      <p>Assume that Brandon and his friends are a really big fan of Emma Watsons.</p>
+    </div>
+
+    
+
+  </div>
+
+
+
+
+  </main>
+{% endblock %}

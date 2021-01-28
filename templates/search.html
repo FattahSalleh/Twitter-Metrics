@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block script %}
+    <script>
+        $("a").removeClass("active");
+        $("#search_menu").addClass("active");
+
+        // toggle visibility of search bar
+        $("#search_box").removeClass("d-none");
+
+        // javascript to display list of results:
+        let input = document.querySelector('input');
+        input.onkeyup = function() {
+            $.get('/search?q=' + input.value, function(data) {
+                let html_list = '';
+                for (word of data) {
+                    html_list += '<li class="list-group-item">' + word + '</li>';
+                }
+                $("#results_list").html(html_list);
+            });
+        };
+
+    </script>
+{% endblock %}
+
+{% block body %}
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="form-group">
+        <ul id='results_list' class="list-group"></ul>
+    </div>
+</main>
+{% endblock %}

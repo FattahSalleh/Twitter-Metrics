@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+
+  p{
+    text-align: left;
+  }
+
+</style>
+
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Assignment 2 - Analyzing User Sentiment</h1>
+  </div>
+
+  
+
+  <div class="grid-container-asg3">
+
+    <div class="grid-item-asg3-logo">
+      <img class='logo_img' src='/static/pic/sensodyne.png'>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 200px;">
+      <h2>Question 1</h2>
+      <h3>What is the opinion of users towards the industry?</h3>
+      <p>People in this healthcare industry always look at different products as this is an essential thing in our lives.</p>
+      <p>In this industry, most people tend to search for information regarding healthcare as well as any promotions that they could secure for these health products.</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 550px;">
+      <h2>Question 2</h2>
+      <h3>Which are the brands that are popular among users within the industry?</h3>
+      <img class='asg3_img' src='/static/graphs asg2/q2.png' style="height: 300px; width: auto;">
+      <p>The word 'sensodyne' is tweeted 2516 times, ‘colgate’ is mentioned 5964 times, ‘crest’ with 2589 times, and ‘listerine’ with only 718 times.</p>
+      <p>Colgate is the most famous brand in this industry as it is mentioned the most, followed by Crest, with Sensodyne following close behind it, and the least famous being Listerine.</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 550px;">
+      <h2>Question 3</h2>
+      <h3>What are the brands that are viewed negatively and positively?</h3>
+      <img class='asg3_img' src='/static/graphs asg2/q3 sentiment.png' style="height: 300px; width: auto;">
+      <p>Sensodyne is viewed positively by around 43% of the comments, and negatively by a little under 10% of the comments, with the other comments being neutral.</p>
+      <p>For Colgate, it is viewed positively by around 32% of the comments, negatively by around 15%, and neutral on the rest of the comments.</p>
+      <p>Sensodyne are viewed more positively with lesser negative comments than Colgate.</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 550px;">
+      <h2>Question 4</h2>
+      <h3>Within the industry, what is the users' sentiment towards the different brands?</h3>
+      <img class='asg3_img' src='/static/graphs asg2/q4.png' style="height: 300px; width: auto;">
+      <p>Crest is viewed very positively by more than 52% of the comments, and negatively by around 14% of the comments, with the other comments being neutral.</p>
+      <p>For Listerine, it is viewed positively by around 31% of the comments, negatively by around 19%, and neutral on the rest of the comments.</p>
+      <p>Crest are viewed much more positively with lesser negative comments than Listerine.</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 550px;">
+      <h2>Question 5</h2>
+      <h3>What are the frequent topics that users mention when they interact with the different brands over social media? What is their sentiment towards those topics?</h3>
+      <h5>Frequent Topics: Colgate (User complaints), cpnews (boycottcolgate, violations, laws, dictatorship), Product (Bad reviews) </h5>
+      <img class='asg3_img' src='/static/graphs asg2/q5.png' style="height: 300px; width: auto;">
+      <p>The most frequent topics discussed by the users when they interact with the different brand over social media is only negative with no positive sentiment, while most of them just being neutral.</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 550px;">
+      <h2>Question 6</h2>
+      <h3>What are the important aspects (and its sentiment) that are discussed by the users specifically on the target company?</h3>
+      <h5>Important Aspects: #gotitfree, advertisements, models</h5>
+      <img class='asg3_img' src='/static/graphs asg2/q6.png' style="height: 300px; width: auto;">
+      <p>More than half of the aspects talked by the user are a positive sentiment and while there are still a few on the neutral, almost half is negative. </p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 550px;">
+      <h2>Question 7</h2>
+      <h3>What is the most popular product of Sensodyne and the sentiment of the users towards the most popular product?</h3>
+      <h5>Most Popular Products of Sensodyne: Rapid Relief</h5>
+      <img class='asg3_img' src='/static/graphs asg2/q7 sentiment.png' style="height: 300px; width: auto;">
+      <p>Most popular product of Sensodyne – Rapid Relief – is viewed mostly positive by the users, with only a little viewing it as neutral and negative.</p>
+    </div>
+
+
+  </div>
+
+
+
+
+  </main>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+
+  p{
+    text-align: left;
+  }
+
+</style>
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Assignment 3 - Social Network Analysis (SNA)</h1>
+  </div>
+
+  
+
+  <div class="grid-container-asg3">
+
+    <div class="grid-item-asg3-logo">
+      <img class='logo_img' src='/static/pic/watsons.png'>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 600px;">
+      <h2>Graph</h2>
+      <img class='asg3_img_graph' src='/static/graphs watsons/1 watsons network.png' style="height: 350px; width: auto;">
+      <p>Number of nodes: 5912</p>
+      <p>Number of edges: 6837</p>
+      <p>Average degree: 2.3129</p>
+      <p>Network Density: 0.000391</p>
+    </div>
+
+    <div class="grid-item-asg3" style="height: 500px;">
+      <h2>Top 10 Nodes by Degree</h2>
+      <img class='asg3_img' src='/static/graphs watsons/2 top 10 degree.png'>
+      <p>Degree of a node is the number of links or edges a node is connected to.</p>
+      <p>MarkRuffalo is an actor in The Avengers and is well-known for his character, the Hulk.</p>
+      <p>AmandaImani91 is a popular Malaysian singer.</p>
+      <p>7 out of the top 10 nodes belongs to famous actors, assume that they have highest degrees because of their fame.</p>
+    </div>
+
+
+    <div class="grid-item-asg3" style="height: 500px;">
+      <h2>Top 10 Nodes by Betweeness Centrality</h2>
+      <img class='asg3_img' src='/static/graphs watsons/4 top 10 betweeness centrality.png'>
+      <p>Betweeness Centrality tests how relevant a node is for the shortest network paths.</p>
+      <p>It is a measure of how important the node is for information flow over a network.</p>
+      <p>Even though MarkRuffalo has many social connections, AmandaImani91 is the common node for nodes having the shortest route to other nodes.</p> 
+      <p>We can say AmandaImani91 and MarkRuffalo are in between few groups in the network graph.</p>
+    </div>
+
+
+    <div class="grid-item-asg3" style="height: 470px;">
+      <h2>Top 10 Nodes by Eigenvector Centrality</h2>
+      <img class='asg3_img' src='/static/graphs watsons/6 top 10 eigenvector centrality.png'>
+      <p>Eigenvector Centrality is a measure of a node's influence in a network.</p>
+      <p>A high eigenvector score means a node is connected to many nodes that have high scores themselves.</p>
+      <p>MarkRuffalo has the highest Eigenvector Centrality while the second node - ChrisEvans - falls quite far behind him.</p>
+      <p>Can assume that MarkRuffalo has many followers who are as famous as him.<p>
+    </div>
+
+
+    <div class="grid-item-asg3" style="height: 470px;">
+      <h2>Top 10 Nodes by Closeness Centrality</h2>
+      <img class='asg3_img' src='/static/graphs watsons/7 top 10 closeness centrality.png'>
+      <p>Closeness centrality is a way to detect nodes that can very easily spread information through a network.</p>
+      <p>Nodes with a high score of closeness have the shortest distances to any other node.</p>
+      <p>Watsonsmy has the highest score in the rankings.<p>
+      <p>Watsonmy is at the core of the network and this is similar to our research on followers and friends of friends of Watsons.</p>
+    </div>
+
+
+    <div class="grid-item-asg3" style="height:720px;">
+      <h2>Top 10 Nodes by Clustering Coefficient</h2>
+      <img class='asg3_img' src='/static/graphs watsons/8 top 10 clustering coefficient.png'>
+      <p>A clustering coefficient is a measure of the degree to which nodes appear to cluster together in one graph.</p>
+      <p>The clustering coefficient is high when these connections are dense.</p>
+      <p>If all of your "mates" know each other, then you have a high coefficient of clustering and vice versa.</p>
+      <p>From the calculations, the charts above show the top 10 with the same 1.0 score.</p>
+      <p>It can be assumed that most of the users are mutuals.</p>
+      <p></p>
+      <h3>Average Clustering Coefficient = 0.07122</h3>
+      <p>Even though the top clusters in this network has 1.0 score of clustering coefficient, however the average of clustering coefficient is still low.</p>
+      <p>This means that there are still many other clusters with low clustering coefficient.</p>
+      <p>Their followers don't know each other or not related at all.</p>
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+
+  </main>
+{% endblock %}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- import bootstrap and jquery -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- personal css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+    </head>
+    <body>
+      <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a href='/' class="navbar-brand col-sm-3 col-md-2 mr-0">TDS3751 (TT02)</a>
+        <input id="search_box" name="search_box" class="d-none form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+          <li class="nav-item text-nowrap">
+            <a class="nav-link" href="#"></a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a id="dashboard_menu1" class="nav-link active" href="http://127.0.0.1:5000">
+                    <span data-feather="home"></span>
+                    Assignment 1 <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a id="dashboard_menu2" class="nav-link active" href="http://127.0.0.1:5000/assignment2">
+                    <span data-feather="home"></span>
+                    Assignment 2 <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a id="dashboard_menu3" class="nav-link active" href="http://127.0.0.1:5000/assignment3">
+                    <span data-feather="home"></span>
+                    Assignment 3 <span class="sr-only">(current)</span>
+                  </a>
+                  <ul>
+                    <li class="nav-item">
+                      <a id="dashboard_menu3" class="nav-link active" href="http://127.0.0.1:5000/assignment3_1">
+                        <span data-feather="home"></span>
+                        Assignment 3 (Community) <span class="sr-only">(current)</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+          </nav>
+
+    
+        </div>
+      </div>
+      
+      {% block body %}
+      {% endblock %}
+      
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+    {% block script %}{% endblock %}
+
+    </body>
+
+</html>
